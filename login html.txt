@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1161a7adbb.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    
+    <div class="body"></div>
+    <div class="grad"></div>
+    <div class="header">
+        
+    </div>
+    <br>
+    <div class="login2" >
+        <input type="button"  value="Register with Us" id="log2">
+</div>
+    <div class="login1" >
+        <h1 id="h">     Login To JITTERS      </h1>
+    </div>
+    <form name="login">
+    
+    <div class="login" >
+        <i class="fas fa-user"></i>
+            <input type="text" placeholder="Enter your user id" name="userid" id="name"><br>
+           
+    </div>
+    <div class="login" >
+        <i class="fas fa-key"></i>
+            <input type="password" placeholder="Enter your Password " name="pswrd" id="pwd"><br>
+          
+    </div>
+    <div class="login" >
+            <input type="button" onclick="check(this.form)" value="Sign In" id="log">
+    </div>
+   
+   
+
+
+
+</form>
+<script language="javascript">
+function check(form)
+{
+
+if(form.userid.value == "sub" && form.pswrd.value == "123")
+{
+window.open('http://127.0.0.1:5501/Website.html')
+}
+else
+{
+alert("Wrong Information! Please try again")
+}
+}
+</script>
+</body>
+</html>

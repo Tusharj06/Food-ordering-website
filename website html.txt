@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JITTERS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1425px)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <script>
+        function showAlert() {
+            alert("Your details has been submitted successfully!");
+        }
+    </script>
+    <div class="container">
+
+        <ul>
+
+            <li class="list"><a href="#Home">Home</a></li>
+            <li class="list"><a href="#Services">Services</a></li>
+            <li class="list"><a href="#partners">Our Partners</a></li>
+            <li class="list"><a href="#contact">Contact us</a></li>
+        </ul>
+    </div>
+    <section id="Home">
+        <h1 id="h9">Welcome to JITTERS!!!</h1>
+        <br>
+        <!-- <p>Here, We provide high quality and hygenic food.</p>
+        <p>Happy to SERVE!!!</p> -->
+    </section><br><br>
+    <h1 id="h1">Our Services</h1>
+
+    <section id="Services">
+
+        <div class="box" id="box1">
+            <img src="img/pizza.jpg" alt="Can't load image ">
+            <!-- <h1 class="hea" id="hea1">DINING</h1> -->
+            <a href="#" class="btn">DINING</a>
+        </div>
+        <div class="box" id="box2">
+            <img src="img/bulk1.jpg" alt="Can't load image" class="img12">
+            <!-- <h1 class="hea">BULK ORDERING</h1> -->
+            <a href="#" class="btn">BULK ORDERING</a>
+        </div>
+        <div class="box" id="box3">
+            <img src="img/delivery.jpg" alt="Can't load image">
+            <!-- <h1 class="hea">FOOD DELIVERY</h1> -->
+            <a href="#" class="btn">FOOD DELIVERY</a>
+        </div>
+    </section>
+    <h1 id="h2">Our Partners</h1>
+    <section id="partners">
+        <img src="logo/google.png" alt="Can't load image" class="img2" id="google">
+        <img src="logo/apple.png" alt="Can't load image" class="img2" id="apple">
+        <img src="logo/amazon.png" alt="Can't load image" class="img2" id="amazon">
+    </section>
+    <h1 id="h3">Contact Us</h1><br><br>
+    <section id="contact">
+        <form method="post" autocomplete="off" name="google-sheet" id="my-form">
+            <label for="name" class="label1">
+            <h3>NAME</h3>
+        </label>
+            <input type="text" name="name" id="name" class="input1" required>
+            <label for="email" class="label1">
+            <h3>E-mail</h3>
+        </label>
+            <input type="email" name="email" id="email" class="input1" required>
+            <label for="phone" class="label1">
+            <h3>Phone no.</h3>
+        </label>
+            <input type="phone" name="phone" id="date" class="input1" required>
+            <h2>Message</h2> <textarea name="description" ads="30" rows="10" class=label1 required></textarea>
+            <button id="btn2">SUBMIT</button>
+        </form>
+    </section>
+
+
+
+
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUgmvchLERZBXRXXza8Cd_P9lNKZ-yvwbG1MyUaXd68smfuCQ/exec'
+        const form = document.forms['google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => alert("Thanks for Contacting us..! We Will get back to You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            document.getElementById("my-form").reset();
+        })
+    </script>
+
+
+    <section id="copyright">
+        Copyright &copy; All rights reserved.
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

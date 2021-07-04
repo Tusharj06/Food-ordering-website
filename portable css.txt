@@ -1,0 +1,39 @@
+.container ul li{
+    margin: 13px 19px;
+    
+    
+}
+
+#Services{
+    
+    flex-direction: column;
+}
+
+
+#partners{
+    
+    flex-direction: column;
+}
+
+#partners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:625px;
+    
+}
+#google{
+    margin: 3%;
+}
+#apple{
+    margin: 3%;
+}
+#amazon{
+    margin: 5%;
+}
+#contact .input1 {
+    width: 80%;
+}
+#contact .label1 {
+    width: 80%;
+} 
